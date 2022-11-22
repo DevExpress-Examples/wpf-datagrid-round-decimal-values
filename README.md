@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # WPF Data Grid - How To Round Decimal Values In Grid Columns
 
-It is possible to specify `DisplayFormat` for a column with decimal values. In this case, `GridControl` keeps using underlying urounded values for filtering. For example, when both 1.2 and 1.1 are rounded down to 1, they are displayed in the filter popup as separate but indistinguishable options.
+It is possible to specify `DisplayFormat` for a column with decimal values. In this case, `GridControl` keeps using underlying unrounded values for filtering. For example, when both 1.2 and 1.1 are rounded down to 1, they are displayed in the filter popup as separate but indistinguishable options.
 
 We offer three solutions to enable filtering by displayed values:
 1. Using the `Binding` property of a column with a converter to round bound values.
@@ -14,8 +14,8 @@ We offer three solutions to enable filtering by displayed values:
 
 ## Documentation
 
-- https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl
-- https://docs.devexpress.com/WPF/6124/controls-and-libraries/data-grid/grid-view-data-layout/columns-and-card-fields/unbound-columns
+- [GridControl](https://docs.devexpress.com/WPF/DevExpress.Xpf.Grid.GridControl)
+- [Unbound Columns](https://docs.devexpress.com/WPF/6124/controls-and-libraries/data-grid/grid-view-data-layout/columns-and-card-fields/unbound-columns)
 
 
 ## Files to Review
