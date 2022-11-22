@@ -9,8 +9,8 @@ namespace FilterDuplicateRecords_Converter
         private const int decimals = 2;
 
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture) {
-            if (value is decimal number) {
-                return Math.Round(number, decimals);
+            if (value is decimal) {
+                return Math.Round((decimal)value, decimals);
             }
 
             throw new ArgumentException();

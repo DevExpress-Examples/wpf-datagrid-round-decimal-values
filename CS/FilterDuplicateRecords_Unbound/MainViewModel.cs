@@ -5,6 +5,6 @@ namespace FilterDuplicateRecords_Unbound
 {
     public class MainViewModel : ViewModelBase
     {
-        public ObservableCollection<Item> Source { get; } = new(Item.GetData(1000));
+        public ObservableCollection<Item> Source { get; } = new ObservableCollection<Item>(Item.GetData(1000));
     }
 }
