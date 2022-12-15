@@ -5,9 +5,14 @@
 <!-- default badges end -->
 # WPF Data Grid - How To Round Decimal Values In Grid Columns
 
-This example demonstrates how to solve problems with sorting or filtering when decimal values are rounded. You can specify only the [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) for a column with decimal values. In this case, `GridControl` keeps using underlying unrounded values for filtering.
+This example demonstrates how to properly round decimal values in GridColumns so that you do not see issues with data management operations (for example, filtering, sorting, and grouping). The most straightforward way to round values in cells is to declare a custom [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat). However, this action affects only cells, while GridControl continues to use underlying unrounded values. As a result, you can see duplicated values in Filter DropDown or duplicated group rows.
 
-For example, when the 1.2 and 1.1 values are rounded down to 1, they are displayed in the filter popup as separate but indistinguishable options. Use one of the following solutions to eliminate data duplication:
+For example, when the 1.01 and 1.02 values are rounded down to 1.0, they are displayed in the filter popup as separate but indistinguishable options. The images below illustrate whether the [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) is declared or not.
+
+![Alt text](images/display-format.png)
+![Alt text](images/no-display-format.png)
+
+To resolve the issue, you need to round values before they are used in GridControl cells. For this, you can use one of the following solutions:
 
 * _Converter._ This example uses the `Binding` property of a column with a converter to round bound values.
 * _Unbound_. This example uses non-editable unbound columns.
