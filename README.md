@@ -9,8 +9,13 @@ This example demonstrates how to properly round decimal values in GridColumns so
 
 For example, when the 1.01 and 1.02 values are rounded down to 1.0, they are displayed in the filter popup as separate but indistinguishable options. The images below illustrate whether the [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) is declared or not.
 
-![Alt text](images/display-format.png)
+In this image, there is no declared [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) as well as any implemented solution of this example.
+
 ![Alt text](images/no-display-format.png)
+
+In this image, the [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) is declared to display up to three symbols.
+
+![Alt text](images/display-format.png)
 
 To resolve the issue, you need to round values before they are used in GridControl cells. For this, you can use one of the following solutions:
 
@@ -18,11 +23,13 @@ To resolve the issue, you need to round values before they are used in GridContr
 * _Unbound_. This example uses non-editable unbound columns.
 * _UnboundEditable_. This example uses editable unbound columns.
 
+In this image, you can see the proper filtering of rounded values.
+
 ![Alt text](images/filtering.png)
 
 ## Implementation details
 
-The _Converter_ solution implements the [IValueConverter.Convert](https://learn.microsoft.com/en-us/dotnet/api/system.windows.data.ivalueconverter.convert) method to round values in columns bound to the converter.
+The _Converter_ solution implements the GridColumn's Binding property to bind it to data. Use a custom converter that rounds values in this Binding definition:
 
 ```xml
 <dxg:GridColumn Header="Growth"
