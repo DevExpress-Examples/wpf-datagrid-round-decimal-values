@@ -9,7 +9,7 @@ This example demonstrates how to properly round decimal values in GridColumns so
 
 For example, when the 1.01 and 1.02 values are rounded down to 1.0, they are displayed in the filter popup as separate but indistinguishable options. The images below illustrate whether the [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) is declared or not.
 
-In this image, there is no declared [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) as well as any implemented solution of this example.
+In this image, there is no declared [`DisplayFormat`](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.Settings.BaseEditSettings.DisplayFormat) nor any implemented solution of this example.
 
 ![Alt text](images/no-display-format.png)
 
