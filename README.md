@@ -25,7 +25,7 @@ We offer three solutions to enable filtering by displayed values:
 - [MainWindow.xaml](./CS/FilterDuplicateRecords_Unbound/MainWindow.xaml)
 - [MainWindow.xaml](./CS/FilterDuplicateRecords_UnboundEditable/MainWindow.xaml) [MainViewModel.cs](./CS/FilterDuplicateRecords_UnboundEditable/MainViewModel.cs)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-datagrid-round-decimal-values&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=wpf-datagrid-round-decimal-values&~~~was_helpful=no)
 
